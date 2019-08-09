@@ -41,7 +41,13 @@
 
 function showValues( obj ) {
   //Code Here
+  var string1 = ""
+  for (let val in obj){
+    string1 += obj[val];
+  }
+  return string1;
 }
+// console.log(showValues({one: 'one', two: 'two', three: 'three'}))
 
 
 
@@ -54,6 +60,14 @@ function showValues( obj ) {
 */
 
 //Code Here
+function greaterThan10(obj){
+  for (let val in obj){
+    if (obj[val] > 10){
+      obj[val] = 0;
+    }
+  }
+  return obj
+}
 
 
 
