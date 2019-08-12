@@ -80,6 +80,14 @@ function greaterThan10(obj){
 */
 
 //Code Here
+function double(obj){
+  for (let val in obj){
+    if (obj[val]){
+      obj[val] = obj[val] * 2;
+    }
+  }
+  return obj;
+}
 
 
 
@@ -94,6 +102,15 @@ function greaterThan10(obj){
 */
 
 //Code Here
+function secrets(obj){
+  var emptyStr = " "
+  for (let val in obj){
+    if (obj[val].charAt(0) === 's' && obj[val].charAt(1) === 'h'){
+      emptyStr + obj[val];
+    }
+  }
+  return emptyStr
+}
 
 
 
