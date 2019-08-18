@@ -103,14 +103,25 @@ function double(obj){
 
 //Code Here
 function secrets(obj){
-  var emptyStr = " "
-  for (let val in obj){
-    if (obj[val].charAt(0) === 's' && obj[val].charAt(1) === 'h'){
-      emptyStr + obj[val];
+  var emptyStr = ""
+  for (let key in obj){
+    if (key.charAt(0) === 's' && key.charAt(1) === 'h'){
+      emptyStr += obj[key];
     }
   }
   return emptyStr
 }
+
+// function secrets(obj){
+//   let emptyStr = "";
+//   for(let key in obj){
+//     if(key.startsWith("sh")){
+//       emptyStr += obj[key];
+//     }
+//   }
+//   return emptyStr;
+// }
+
 
 
 
@@ -143,6 +154,10 @@ function secrets(obj){
 
 //Code Here
 
+function removePassword(obj){
+  delete obj['password']
+  return obj
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -161,6 +176,11 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+for (let key in deleteTheBigNumbers) {
+  if (deleteTheBigNumbers[key] > 100){
+    delete deleteTheBigNumbers[key];
+  }
+}
 
 
 
@@ -174,6 +194,14 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+let startsWithK = (obj) => {
+  for(let key in obj){
+    if (key.startsWith('k')){
+      delete obj[key];
+    }
+  }
+  return obj;
+}
 
 
 
@@ -189,5 +217,13 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
+let hiddenTreasure = (obj) => {
+  for(let key in obj){
+    if(!obj[key].includes('treasure')){
+      delete obj[key];
+    }
+  }
+  return obj
+}
 
 

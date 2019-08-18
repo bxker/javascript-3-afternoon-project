@@ -145,3 +145,18 @@ function numberGroups(obj){
 }
 
 
+//Alternative solution
+
+function numberGroups({a, b, c}){
+  let numsArr = [a, b, c];
+  let longestArr = [];
+
+  for(let i = 0; i < numsArr.length; i++){
+    if(numsArr[i].length > longestArr.length){
+      longestArr = numsArr[i]
+    }
+  }
+  return longestArr;
+}
+
+
